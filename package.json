@@ -1,0 +1,23 @@
+{
+  "name": "simple-monorepo",
+  "version": "1.0.0",
+  "description": "example of ts monorepo with npm workspaces",
+  "scripts": {
+    "clean0": "tsc --build --clean",
+    "clean": "rimraf \"packages/**/lib\" \"packages/**/*.tsbuildinfo\"",
+    "compile": "tsc --build --verbose",
+    "watch": "tsc --build --watch"
+  },
+  "keywords": [
+    "monorepo"
+  ],
+  "author": "MEK",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

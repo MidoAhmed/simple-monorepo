@@ -1,0 +1,17 @@
+# Created by https://www.toptal.com/developers/gitignore/api/macos,node
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,node
+
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
