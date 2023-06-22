@@ -1,15 +1,16 @@
 {
   "name": "simple-monorepo",
   "version": "1.0.0",
-  "description": "example of ts monorepo with npm workspaces",
+  "description": "simple monorepo setup with npm workspaces and typescript project references",
   "scripts": {
-    "clean0": "tsc --build --clean",
-    "clean": "rimraf \"packages/**/lib\" \"packages/**/*.tsbuildinfo\"",
+    "clean": "tsc --build --clean",
     "compile": "tsc --build --verbose",
     "watch": "tsc --build --watch"
   },
   "keywords": [
-    "monorepo"
+    "monorepo",
+    "typescript project references",
+    "npm workspaces"
   ],
   "author": "MEK",
   "license": "ISC",
