@@ -5,7 +5,10 @@
   "scripts": {
     "clean": "tsc --build --clean",
     "compile": "tsc --build --verbose",
-    "watch": "tsc --build --watch"
+    "start": "npm-run-all --parallel tsc:watch app:watch ",
+    "tsc:watch": "tsc --build --watch",
+    "app:watch": "node --watch packages/app/lib/main.js",
+    "watch": "concurrently -n 1,2 \"node --watch packages/app/lib/main.js\" \"tsc --build --watch\""
   },
   "keywords": [
     "monorepo",
@@ -15,6 +18,9 @@
   "author": "MEK",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.3"
   },
